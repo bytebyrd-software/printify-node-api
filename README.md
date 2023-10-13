@@ -90,6 +90,29 @@ API.orders.delete('yourProductId');
 
 ## 4. Events
 
+If you use the printify-node-api in combination with express, you can register an endpoint for the printify webhooks. Events will be sent to the defined endpoint and whenever and event arrives at this endpoint, the printify-node-api will emit an event of the event type that has been received.
+
+You can then listen to these events and implement your own handlers to react to these events.
+
+**WARNING: Printify does not provide webhooks for local test environments. This feature can only be used in production or if your express server is reachable.**
+
+```javascript
+const express = require('express');
+
+const app = express();
+/** Your express setup **/
+
+//Register an endpoint for your events
+API.registerWebhookEndpoint(app, '/webhooks', whsec);
+
+//Listen to events. Only events with a registered webhook will be fired by printify
+// The event will be passed to the listener
+
+API.on('order:created', (event) => {
+    /*** your listener implementation***/
+})
+```
+
 //TODO
 
 For information about printify's events please visit the [Printify API Reference](https://developers.printify.com/#events)
