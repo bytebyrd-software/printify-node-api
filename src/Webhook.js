@@ -1,3 +1,4 @@
+
 const Collection = require('./Collection.js');
 class Webhook extends Collection {
     constructor(axios, shopId) {

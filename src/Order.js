@@ -11,7 +11,15 @@ class Order extends Collection {
      * @returns {Promise<AxiosResponse>} A Promise with the response from Printify
      */
     sendToProduction(orderId) {
-        return this.client.post()
+        return this.client.post(`shops/${this.shopId}/orders/${orderId}/send_to_production.json`)
+    }
+
+    calculateShipping(payload){
+        return this.client.post(`shops/${this.shopId}/orders/shipping.json`, payload)
+    }
+
+    cancel(orderId){
+        return this.client.post(`shops/${this.shopId}/orders/${orderId}/cancel.json`)
     }
 }
 

@@ -6,27 +6,31 @@ class Product extends Collection {
     }
 
     publish(id, payload, handle) {
-        this.client.post(`/shops/${this.shopId}/${this.endpoint}/${id}/publish.json`, payload)
+        this.client.post(`shops/${this.shopId}/${this.endpoint}/${id}/publish.json`, payload)
             .then(res => res.json())
             .then(data => {
                 if (res.status === 200) {
-                    return this.client(`/shops/${this.shopId}/${this.endpoint}/${id}/publishing_succeeded.json`, {
+                    return this.client(`shops/${this.shopId}/${this.endpoint}/${id}/publishing_succeeded.json`, {
                         external: {
                             id,
                             handle
                         }
                     });
                 } else {
-                    return this.client(`/shops/${this.shopId}/${this.endpoint}/${id}/publishing_failed.json`, {
+                    return this.client(`shops/${this.shopId}/${this.endpoint}/${id}/publishing_failed.json`, {
                         reason: `Server responded with status ${res.status}`
                     });
                 }
             })
             .catch(err => {
-                return this.client(`/shops/${this.shopId}/${this.endpoint}/${id}/publishing_failed.json`, {
+                return this.client(`shops/${this.shopId}/${this.endpoint}/${id}/publishing_failed.json`, {
                     reason: `${err.message}`
                 });
             })
+    }
+
+    unpublish(id) {
+        return this.client(`shops/${this.shopId}/products/${id}/unpublish.json`)
     }
 }
 
