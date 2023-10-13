@@ -28,7 +28,7 @@ class Product extends Collection {
                 });
             })
     }
-
+    
     unpublish(id) {
         return this.client(`shops/${this.shopId}/products/${id}/unpublish.json`)
     }

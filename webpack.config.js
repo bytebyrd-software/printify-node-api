@@ -8,9 +8,7 @@ module.exports = () => {
             path: path.resolve(__dirname, './dist'),
             filename: 'index.js',
             library: {
-                name: 'printify-node-api',
-                type: 'umd',
-                umdNamedDefine: true
+                type: 'commonjs2'
             }
         },
         module: {
