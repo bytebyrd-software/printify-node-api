@@ -53,8 +53,43 @@ API.products.delete('yourProductId');
 
 ### 3.2 `orders` collection
 
+Access your orders via `API.orders` and the respective method.
+
+```javascript
+//Create an order
+API.orders.create(payload);
+
+//Get all orders
+API.orders.getAll()
+.then(response => console.log(response.data))
+.catch( err => console.log(err.message));
+
+//Get a single order
+API.orders.getById('yourProductId')
+.then(response => console.log(response.data))
+.catch( err => console.log(err.message));
+
+//Update an order
+API.orders.update('yourProductId', payload);
+
+//Delete an order
+API.orders.delete('yourProductId');
+
+//Send an order to production
+
+//TODO 
+
+//Calculate shipping costs of an order
+
+//TODO
+```
+
 ### 3.3 `webhooks` collection
 
+//TODO
+
 ## 4. Events
+
+//TODO
 
 For information about printify's events please visit the [Printify API Reference](https://developers.printify.com/#events)
