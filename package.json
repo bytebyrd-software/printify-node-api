@@ -4,11 +4,13 @@
   "description": "A small API implementation to communicate with your printify shops",
   "main": "dist/index.js",
   "scripts": {
+    "build": "babel src --out-dir dist",
+    "start": "babel src --watch --out-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url":  "https://github.com/bytebyrd-software/printify-node-api.git"
+    "url": "https://github.com/bytebyrd-software/printify-node-api.git"
   },
   "keywords": [
     "printify",
@@ -24,5 +26,14 @@
   "bugs": {
     "url": "https://github.com/bytebyrd-software/printify-node-api/issues"
   },
-  "homepage": "https://github.com/bytebyrd-software/printify-node-api#readme"
+  "homepage": "https://github.com/bytebyrd-software/printify-node-api#readme",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2"
+  }
 }
