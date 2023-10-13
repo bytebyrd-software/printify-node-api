@@ -1,0 +1,28 @@
+{
+  "name": "printify-node-api",
+  "version": "1.0.0",
+  "description": "A small API implementation to communicate with your printify shops",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url":  "https://github.com/bytebyrd-software/printify-node-api.git"
+  },
+  "keywords": [
+    "printify",
+    "shop",
+    "shopify",
+    "dropship",
+    "online-shop",
+    "api",
+    "shop-api"
+  ],
+  "author": "bytebyrd software",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bytebyrd-software/printify-node-api/issues"
+  },
+  "homepage": "https://github.com/bytebyrd-software/printify-node-api#readme"
+}
