@@ -1,6 +1,6 @@
 {
   "name": "printify-node-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small API implementation to communicate with your printify shops",
   "main": "dist/index.js",
   "scripts": {

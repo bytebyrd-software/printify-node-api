@@ -1,4 +1,4 @@
-# printify-node-api v1.0.0
+# printify-node-api v1.0.1
 
 ## 1. Installation
 
