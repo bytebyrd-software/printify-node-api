@@ -48,8 +48,6 @@ class Printify extends EventEmitter {
                 hmac.update(payload, 'utf-8');
 
                 let hash = 'sha256=' + hmac.digest('hex');
-                console.log(sig.toString('hex'));
-                console.log(hash.toString('hex'))
                 if (hash !== sig) {
                     return res.status(401).end();
                 }
