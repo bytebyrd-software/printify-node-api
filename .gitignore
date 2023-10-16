@@ -1,5 +1,7 @@
 /node_modules/
 dist
 printify-test.js
+printify-test2.js
+printify-test3.js
 .npmignore
 coverage

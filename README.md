@@ -1,4 +1,4 @@
-# printify-node-api
+# printify-node-api v1.0.0
 
 ## 1. Installation
 
@@ -13,8 +13,17 @@ Just require the Printify class by typing:
 ```javascript
 const Printify = require('printify-node-api');
 
-const API = new Printify( 'myShopId', options)
+const API =  Printify.getInstance( 'myShopId', options)
 ```
+Parameters:
+
+`shopID`: Your Printify shop ID
+
+`options`: A configuration object with the following properties:
+
+- `version` - *default* ```"v1"```: The Printify API version.
+- `authKey`: Your printify API key
+- `mode` - *default* `undefined`: Can be set to `"debug"` to print additional information to the console
 
 ## 3. Collections
 
